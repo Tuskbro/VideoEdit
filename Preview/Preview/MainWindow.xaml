@@ -1,0 +1,102 @@
+﻿<Window x:Class="Preview.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:ax="clr-namespace:AxTimelineAxLib;assembly=AxInterop.TimelineAxLib"
+        xmlns:local="clr-namespace:Preview"
+         xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Closed="Window_Closed" Background="#0D0D0D">
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1.8*"/>
+            <RowDefinition Height="Auto"/>
+
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" Height="24" VerticalAlignment="Top">
+            <MenuItem Header="File"  >
+                <MenuItem Header="Open"/>
+                <MenuItem Header="New project"/>
+                <MenuItem Header="Save"/>
+                <MenuItem Header="Save As"/>
+                <MenuItem Header="Import" Name="Import" Click="Import_Click"/>
+                <MenuItem Header="Export" Name="Export" Click="Export_Click"/>
+                <MenuItem />
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Window">
+                
+            </MenuItem>
+            <MenuItem Header="Help">
+                
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="2*" MinWidth="400"/>
+            </Grid.ColumnDefinitions>
+
+        
+          
+            
+            
+            <DockPanel Grid.Column="0">
+                <DataGrid DockPanel.Dock="Top" Name="FileList" >
+                    <DataGrid.Columns  >
+                        <DataGridTextColumn x:Name="Name" Header="Name"/>
+                        <DataGridTextColumn x:Name="Format" Header="Format"/>
+                        <DataGridTextColumn x:Name="Size" Header="Size"/>
+                        <DataGridTextColumn x:Name="Path" Header="Path"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                
+            
+            </DockPanel>
+
+            <DockPanel Grid.Column="4" >
+                <Grid DockPanel.Dock="Top">
+                <WindowsFormsHost  HorizontalAlignment="Stretch" Height="200" VerticalAlignment="Stretch"     >
+                    <wf:PictureBox x:Name="PictureBox"  Dock="Fill" SizeMode="AutoSize"  />
+                    
+                </WindowsFormsHost>
+                    <Canvas Background="Transparent" Opacity="0"/>
+
+                </Grid>
+              
+                <Grid DockPanel.Dock="Top" MinWidth="400" HorizontalAlignment="Center" Height="40" VerticalAlignment="Top">
+                    <Button HorizontalAlignment="Center" Name="StopPriViewBtn" Click="StopPriViewBtn_Click" Margin="3,3,120,3" Content="" Width="60" Height="25"></Button>
+                    <Button HorizontalAlignment="Center" Name="PlayPriviewBtn" Click="PlayPriviewBtn_Click" Margin="3" Content="" Width="60" Height="25"></Button>
+                    <Button HorizontalAlignment="Center" Name="PausePriviewBtn" Click="PausePriviewBtn_Click"  Margin="120,3,3,3" Content="" Width="60" Height="25"></Button>
+                </Grid>
+                
+
+            </DockPanel>
+                <GridSplitter Background="Aqua" Grid.Column="1" ShowsPreview="False" Width="3"
+        HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+            <GridSplitter Background="Aqua" Grid.Column="3" ShowsPreview="False" Width="3"
+        HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+            <!--<TextBox Grid.Column="2" Name="EditSub" SpellCheck.SpellingReform="PreAndPostreform" TextWrapping="Wrap"   ></TextBox>
+            -->
+        </Grid>
+
+        <local:ToolsBar Grid.Row="2" x:Name="Tools"/>
+
+        <WindowsFormsHost Name="wfh" Grid.Row="3">
+            <ax:AxTimelineControl x:Name="axTimeLine" />
+        </WindowsFormsHost>
+    
+    </Grid>
+</Window>

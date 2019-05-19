@@ -1,0 +1,12 @@
+I:\Preview\TimeLine\bin\x86\Debug\TimeLineAxLib.dll
+I:\Preview\TimeLine\bin\x86\Debug\TimeLineAxLib.pdb
+I:\Preview\TimeLine\bin\x86\Debug\Interop.TimelineAxLib.dll
+I:\Preview\TimeLine\bin\x86\Debug\AxInterop.TimelineAxLib.dll
+I:\Preview\TimeLine\obj\x86\Debug\Interop.TimelineAxLib.dll
+I:\Preview\TimeLine\obj\x86\Debug\AxInterop.TimelineAxLib.dll
+I:\Preview\TimeLine\obj\x86\Debug\TimeLineAxLib.csproj.ResolveComReference.cache
+I:\Preview\TimeLine\obj\x86\Debug\TimeLine.UserControl1.resources
+I:\Preview\TimeLine\obj\x86\Debug\TimeLineAxLib.csproj.GenerateResource.cache
+I:\Preview\TimeLine\obj\x86\Debug\TimeLineAxLib.csproj.CoreCompileInputs.cache
+I:\Preview\TimeLine\obj\x86\Debug\TimeLineAxLib.dll
+I:\Preview\TimeLine\obj\x86\Debug\TimeLineAxLib.pdb
