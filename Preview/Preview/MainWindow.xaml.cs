@@ -122,5 +122,11 @@ namespace Preview
         {
             thread.Abort();
         }
+
+        private void OpenPlayer_Click(object sender, RoutedEventArgs e)
+        {
+            Player player = new Player();
+            player.Show();
+        }
     }
 }

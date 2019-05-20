@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Preview"
                      xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
                 xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz" 
-             StartupUri="MainWindow.xaml">
+             StartupUri="Start.xaml">
     <Application.Resources>
         <ResourceDictionary>
 
@@ -65,39 +65,36 @@ Do not rename, keep in sequence; light to dark. -->
 
             </Style>
             <Style TargetType="{x:Type Window}">
-                <Setter Property="Background" Value="#0D0D0D"></Setter>
-            </Style>
-            <Style TargetType="{x:Type Grid}">
-                <Setter Property="Background" Value="Transparent"></Setter>
                 
             </Style>
+            <Style TargetType="{x:Type Grid}">
+                
+                
+            </Style>
+           
             <Style TargetType="{x:Type DockPanel}">
-                <Setter Property="Background" Value="Transparent"></Setter>
+                <Setter Property="Background" Value="#0D0D0D"></Setter>
             </Style>
             <Style TargetType="{x:Type WrapPanel}">
-                <Setter Property="Background" Value="Transparent"></Setter>
+                <Setter Property="Background" Value="#0D0D0D"></Setter>
             </Style>
             <Style TargetType="{x:Type StackPanel}">
-                <Setter Property="Background" Value="Transparent"></Setter>
+                <Setter Property="Background" Value="#0D0D0D"></Setter>
             </Style>
             <Style TargetType="{x:Type Menu}">
-                <Setter Property="Background" Value="Transparent"></Setter>
+                <Setter Property="Background" Value="#0D0D0D"></Setter>
                
                 <Setter Property="Foreground" Value="White"/>
 
             </Style>
             <Style TargetType="{x:Type TextBox}">
-                <Setter Property="Background" Value="Transparent"></Setter>
+                <Setter Property="Background" Value="#0D0D0D"></Setter>
                 <Setter Property="Foreground" Value="White"></Setter>
             </Style>
-            
-            <Style TargetType="{x:Type TextBlock}">
-                <Setter Property="Background" Value="Transparent"></Setter>
-                <Setter Property="Foreground" Value="White"></Setter>
-            </Style>
+        
             
             <Style TargetType="{x:Type CheckBox}">
-                <Setter Property="Background" Value="Transparent"></Setter>
+                <Setter Property="Background" Value="#0D0D0D"></Setter>
                 <Setter Property="Foreground" Value="White"></Setter>
             </Style>
             <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MaterialDesignComboBox}">

@@ -25,11 +25,11 @@
         <WrapPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left">
 
             <StackPanel >
-                <TextBlock Name="FormatInfo" Margin="3,3,3,20" Text="Format"/>
-                <TextBlock  Name="ResolutionWidthInfo"  Margin="3" Text="Width" />
-                <TextBlock  Name="ResolutionHeightInfo" Margin="3" Text="Height"/>
-                <TextBlock  Name="VideoBirtateInfo" Margin="3" Text="Video Birtate" />
-                <TextBlock  Name="AudioBitrateInfo" Margin="3" Text="Audio Bitrate" />
+                <TextBlock Foreground="#0FF2B2" Name="FormatInfo" Margin="3,3,3,20" Text="Format"/>
+                <TextBlock Foreground="#0FF2B2" Name="ResolutionWidthInfo"  Margin="3" Text="Width" />
+                <TextBlock Foreground="#0FF2B2" Name="ResolutionHeightInfo" Margin="3" Text="Height"/>
+                <TextBlock Foreground="#0FF2B2" Name="VideoBirtateInfo" Margin="3" Text="Video Birtate" />
+                <TextBlock Foreground="#0FF2B2" Name="AudioBitrateInfo" Margin="3" Text="Audio Bitrate" />
                 <WindowsFormsHost Height="20" Width="100">
                     <wf:ProgressBar x:Name="ConvertProgresBar"    />
                 </WindowsFormsHost>
@@ -56,20 +56,20 @@
 
             <StackPanel >
                 
-                <TextBlock  Name="FrameRateInfo" Margin="3" Text="FrameRate" />
-                <TextBlock  Name="AudioChannelInfo" Margin="3" Text="Audio Channe" />
-                <TextBlock  Name="SampleRateInfo" Margin="3,3,3,15" Text="Sample Rate" />
-                <TextBlock  Name="AspectRadioInfo" Margin="3,3,3,15" Text="Aspect Radio" />
-                <TextBlock  Name="H264PresetInfo" Margin="3" Text="H264 Preset" />
+                <TextBlock Foreground="#0FF2B2" Name="FrameRateInfo" Margin="3" Text="FrameRate" />
+                <TextBlock Foreground="#0FF2B2" Name="AudioChannelInfo" Margin="3" Text="Audio Channe" />
+                <TextBlock Foreground="#0FF2B2" Name="SampleRateInfo" Margin="3,3,3,15" Text="Sample Rate" />
+                <TextBlock Foreground="#0FF2B2" Name="AspectRadioInfo" Margin="3,3,3,15" Text="Aspect Radio" />
+                <TextBlock Foreground="#0FF2B2" Name="H264PresetInfo" Margin="3" Text="H264 Preset" />
                
 
             </StackPanel>
 
             <StackPanel >
                
-                <TextBox  Name="FrameRate" Margin="3" Text="25" Width="80"/>
-                <TextBox  Name="AudioChannel" Margin="3" Text="2" Width="80"/>
-                <TextBox  Name="SampleRate" Margin="3" Text="144100" Width="80"/>
+                <TextBox   Name="FrameRate" Margin="3" Text="25" Width="80"/>
+                <TextBox   Name="AudioChannel" Margin="3" Text="2" Width="80"/>
+                <TextBox   Name="SampleRate" Margin="3" Text="144100" Width="80"/>
                 <ComboBox  Name="AspectRadio" Margin="3"  Width="80" >
                     <ComboBoxItem Content="4:3"/>
                     <ComboBoxItem IsSelected="True" Content="16:9"/>

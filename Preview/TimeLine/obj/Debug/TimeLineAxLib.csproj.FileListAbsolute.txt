@@ -24,3 +24,16 @@ E:\Preview\TimeLine\obj\Debug\TimeLineAxLib.csproj.GenerateResource.cache
 E:\Preview\TimeLine\obj\Debug\TimeLineAxLib.csproj.CoreCompileInputs.cache
 E:\Preview\TimeLine\obj\Debug\TimeLineAxLib.dll
 E:\Preview\TimeLine\obj\Debug\TimeLineAxLib.pdb
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\bin\Debug\TimeLineAxLib.dll
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\bin\Debug\TimeLineAxLib.pdb
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\bin\Debug\Interop.TimelineAxLib.dll
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\bin\Debug\AxInterop.TimelineAxLib.dll
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\obj\Debug\TimeLineAxLib.csprojAssemblyReference.cache
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\obj\Debug\Interop.TimelineAxLib.dll
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\obj\Debug\AxInterop.TimelineAxLib.dll
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\obj\Debug\TimeLineAxLib.csproj.ResolveComReference.cache
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\obj\Debug\TimeLine.UserControl1.resources
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\obj\Debug\TimeLineAxLib.csproj.GenerateResource.cache
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\obj\Debug\TimeLineAxLib.csproj.CoreCompileInputs.cache
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\obj\Debug\TimeLineAxLib.dll
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\TimeLine\obj\Debug\TimeLineAxLib.pdb

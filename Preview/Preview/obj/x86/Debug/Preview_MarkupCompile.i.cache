@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Preview\Preview\obj\x86\Debug\
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\Preview\obj\x86\Debug\
 Preview
 none
 false
 DEBUG;TRACE
-E:\Preview\Preview\App.xaml
-4-960351474
+C:\Users\nln10\Desktop\VE\VideoEdit\Preview\Preview\App.xaml
+519512867
 
-10-1748606415
-28-565598400
-ExportOptions.xaml;MainWindow.xaml;Player.xaml;ToolsBar.xaml;
+12-1444238359
+30-1422261636
+ExportOptions.xaml;MainWindow.xaml;Player.xaml;Start.xaml;ToolsBar.xaml;
 
-False
+True
 

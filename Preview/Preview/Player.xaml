@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Preview"
         mc:Ignorable="d"
-        Title="Player" Height="450" Width="800">
+        Title="Player" Height="450" Width="800" Background="#0D0D0D">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -13,11 +13,14 @@
             <RowDefinition Height="Auto"/>
 
         </Grid.RowDefinitions>
-        <MediaElement Name="View" Grid.Row="0"></MediaElement>
+        <MediaElement LoadedBehavior="Manual"  Name="View" Grid.Row="0"></MediaElement >
         <TextBox Grid.Row="1"  TextAlignment="Center" Background="Black" Foreground="White"   Name="RecognitionText"  >
 
         </TextBox>
         <WrapPanel Grid.Row="2" DockPanel.Dock="Top" MinWidth="400" HorizontalAlignment="Center" Height="40" VerticalAlignment="Top">
+            <Button Name="OpenFile" Click="OpenFile_Click"   Margin="3"  Width="60" Height="25" >
+                <TextBlock></TextBlock></Button>
+
             <Button Name="BackPriviewBtn" Click="BackPriviewBtn_Click" MouseDown="BackPriviewBtn_MouseDown" Content="" Margin="3"  Width="60" Height="25" ></Button>
             <Button Name="StopPriViewBtn" Click="StopPriViewBtn_Click" Margin="3" Content="" Width="60" Height="25"></Button>
             <Button Name="PlayPriviewBtn" Click="PlayPriviewBtn_Click" Margin="3" Content="" Width="60" Height="25"></Button>

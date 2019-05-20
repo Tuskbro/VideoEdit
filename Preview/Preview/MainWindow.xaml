@@ -38,6 +38,7 @@
             <MenuItem Header="Help">
                 
             </MenuItem>
+            <MenuItem Name="OpenPlayer" Click="OpenPlayer_Click" Header="Open Player"></MenuItem>
         </Menu>
 
         <Grid Grid.Row="1">
