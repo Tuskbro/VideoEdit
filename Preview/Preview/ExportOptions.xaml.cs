@@ -42,39 +42,10 @@ namespace Preview
             TimeLine.SetVideoTrackFrameRate(float.Parse(FrameRate.Text));
             TimeLine.SetVideoTrackResolution(int.Parse(ResolutionWidth.Text), int.Parse(ResolutionHeight.Text));
 
-            /*  if (TimeLine.OutputType == 0)
-              {
-
-                  if (chkUseVideocomp.Checked)
-                      TimeLine.AVIVideoCompressor = cboavivencoder.SelectedIndex;
-                  else
-                      TimeLine.AVIVideoCompressor = -1;
-
-                  if (chkUseAudiocomp.Checked)
-                      TimeLine.AVIAudioCompressor = cboaviaencoder.SelectedIndex;
-                  else
-                      TimeLine.AVIAudioCompressor = -1;
-
-                  strFilter = "AVI File (*.avi)|*.avi||";
-              }
-              else if (TimeLine.OutputType == 1)
-              {
-                  strFilter = "WMV File (*.wmv)|*.wmv||";
-                  TimeLine.WMVProfile = cboWMVProfile.SelectedIndex;
-              }
-              else */
             if (TimeLine.OutputType == 2)
               {
-                /*  TimeLine.MP4AspectRatio = AspectRadio.SelectedIndex;
-                  TimeLine.MP4AudioBitrate = int.Parse(AudioBitrate.Text);
-                  TimeLine.MP4AudioChannels = int.Parse(AudioChannel.Text);
-                  TimeLine.MP4AudioSampleRate = int.Parse(SampleRate.Text);
-                  TimeLine.MP4Framerate = float.Parse(FrameRate.Text);
-                  TimeLine.MP4H264Preset = H264Preset.SelectedIndex;
-                  TimeLine.MP4Height = int.Parse(ResolutionHeight.Text);
-                  TimeLine.MP4Width = int.Parse(ResolutionWidth.Text);
-                  TimeLine.MP4VideoBitrate = int.Parse(VideoBitrate.Text);
-                 */ strFilter = "MP4 File (*.mp4)|*.mp4||";
+               
+                  strFilter = "MP4 File (*.mp4)|*.mp4||";
         }
 
             System.Windows.Forms.SaveFileDialog saveFileDialog = new System.Windows.Forms.SaveFileDialog();
@@ -85,12 +56,7 @@ namespace Preview
                 iresult = TimeLine.Save(saveFileDialog.FileName);
 
 
-                //ListBox1.Items.Clear();
-                //get current graph filters and add to listbox
-               // for (int i = 0; i < TimeLine.DecoderGetCurrentFiltersCount() - 1; i++)
-              //  {
-               //     ListBox1.Items.Add(TimeLine.DecoderGetCurrentFilterName(i));
-               // }
+               
 
                 if (iresult != 1)
                 {

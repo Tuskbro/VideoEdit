@@ -18,6 +18,7 @@ using System.Windows.Interop;
 using System.Windows.Forms;
 using NReco.VideoConverter;
 using System.Media;
+using System.Net.Sockets;
 
 namespace Preview
 {
@@ -26,36 +27,52 @@ namespace Preview
     /// </summary>
     public partial class Player : Window
     {
-
         string InputFile;
-        string Outputfile;
+      public string Outputfile;
+      
+        
+     bool winClose=false;
 
         public Player()
         {
             InitializeComponent();
+           
         }
 
+        bool NetworkCheked() {
+             if (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+            {
+                System.Windows.MessageBox.Show("Отсутствует или ограниченно физическое подключение к сети\nПроверьте настройки вашего сетевого подключения");
+                return false;
+            }
+
+          
+            else return true;
+        }
         private void BackPriviewBtn_Click(object sender, RoutedEventArgs e)
         {
-            View.Position -= new TimeSpan(00, 00, 05);
+            View.Position -= TimeSpan.FromSeconds(5);
         }
 
-        private void BackPriviewBtn_MouseDown(object sender, MouseButtonEventArgs e)
+       
+        public void subtitle()
         {
-            View.Position -= new TimeSpan(00, 00, 02);
+        
+             if (NetworkCheked() == true )
+             {
+                Thread t = new Thread(delegate ()
+                {
+                    RecognizeSpeechAsync(Outputfile + ".wav").Wait();
 
-        }
+                });
 
-        private void PlayPriviewBtn_Click(object sender, RoutedEventArgs e)
+                t.Start();
+            }
+}
+        public  void PlayPriviewBtn_Click(object sender, RoutedEventArgs e)
         {
 
-            Thread t = new Thread(delegate ()
-            {
-                RecognizeSpeechAsync(Outputfile + ".wav").Wait();
-
-            });
-            t.Start();
-
+            subtitle();
             View.Play();
 
 
@@ -77,7 +94,7 @@ namespace Preview
 
         private void NextPriviewBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            View.Position += TimeSpan.FromSeconds(5);
         }
 
         private void MutePriviewBtn_Click(object sender, RoutedEventArgs e)
@@ -98,8 +115,7 @@ namespace Preview
 
 
         }
-        byte[] bufer;
-        int ofset, count;
+        
         /// <summary>
         /// Сonverts speech to text
         /// </summary>
@@ -135,12 +151,12 @@ namespace Preview
                         {
                             RecognitionText.Text = e.Result.Text;
                            
-                            // EditSub.Text += e.Result.Text;
+                           
                             
 
                         }));
 
-                        // RecognitionText.Text += e.Result.Text;
+                       
 
                     };
 
@@ -154,7 +170,7 @@ namespace Preview
                             RecognitionText.Dispatcher.Invoke((Action)(() =>
                             {
                                 RecognitionText.Text = e.Result.Text;
-                                    //EditSub.Text += e.Result.Text;
+                                  
 
                                 }));
 
@@ -196,14 +212,12 @@ namespace Preview
 
                     recognizer.SessionStarted += (s, e) =>
                     {
-                        //Sub.Text = "\n    Session started event.";
+                       
                     };
 
                     recognizer.SessionStopped += (s, e) =>
                     {
-                        //Sub.Text ="\n    Session stopped event.";
-                        //Sub.Text = "\n Stop recognition.";
-                        //Sub.Text = "\n Stop recognition.";
+                        
                         
                     };
 
@@ -215,13 +229,25 @@ namespace Preview
                     Task.WaitAny(new[] { stopRecognition.Task });
 
                     // Stops recognition.
+                    if (winClose == true) {
+                        
+
+                        
+                    }
                     await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
                     Thread.Sleep(1000);
 
                 }
             }
 
-            // </recognitionContinuousWithFile>
+            
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            
+            Environment.Exit(0);
+
         }
 
         private void OpenFile_Click(object sender, RoutedEventArgs e)

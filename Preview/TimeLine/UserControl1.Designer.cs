@@ -38,18 +38,21 @@
             this.axTimelineControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axTimelineControl1.Enabled = true;
             this.axTimelineControl1.Location = new System.Drawing.Point(0, 0);
+            this.axTimelineControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.axTimelineControl1.Name = "axTimelineControl1";
             this.axTimelineControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axTimelineControl1.OcxState")));
-            this.axTimelineControl1.Size = new System.Drawing.Size(911, 367);
+            this.axTimelineControl1.Size = new System.Drawing.Size(1215, 452);
             this.axTimelineControl1.TabIndex = 0;
+            
             // 
             // UserControl1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.axTimelineControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(911, 367);
+            this.Size = new System.Drawing.Size(1215, 452);
             ((System.ComponentModel.ISupportInitialize)(this.axTimelineControl1)).EndInit();
             this.ResumeLayout(false);
 

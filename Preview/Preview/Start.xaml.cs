@@ -38,5 +38,12 @@ namespace Preview
             player.Show();
             this.Close();
         }
+
+        private void OpenRef_Click(object sender, RoutedEventArgs e)
+        {
+            Reference reference = new Reference();
+            reference.Show();
+            this.Close();
+        }
     }
 }

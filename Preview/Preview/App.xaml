@@ -16,7 +16,8 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DataGrid.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DatePicker.xaml" />
-                
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ComboBox.xaml" />
 
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
@@ -56,7 +57,9 @@ Do not rename, keep in sequence; light to dark. -->
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="Background" Value="#0D0D0D"></Setter>
                 <Setter Property="BorderBrush" Value="#027353"/>
+                <Setter Property="FontFamily" Value="Microsoft Sans Serif"/>
             </Style>
+         
             <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatButton}">
                 <Setter Property="FontFamily" Value="Font Awesome 5 Free Solid"/>
                
@@ -73,23 +76,24 @@ Do not rename, keep in sequence; light to dark. -->
             </Style>
            
             <Style TargetType="{x:Type DockPanel}">
-                <Setter Property="Background" Value="#0D0D0D"></Setter>
+                <Setter Property="Background" Value="#FF191919"></Setter>
             </Style>
             <Style TargetType="{x:Type WrapPanel}">
-                <Setter Property="Background" Value="#0D0D0D"></Setter>
+                <Setter Property="Background" Value="#FF191919"></Setter>
             </Style>
             <Style TargetType="{x:Type StackPanel}">
-                <Setter Property="Background" Value="#0D0D0D"></Setter>
+                <Setter Property="Background" Value="#FF191919"></Setter>
             </Style>
             <Style TargetType="{x:Type Menu}">
-                <Setter Property="Background" Value="#0D0D0D"></Setter>
+                <Setter Property="Background" Value="#FF191919"></Setter>
                
                 <Setter Property="Foreground" Value="White"/>
 
             </Style>
             <Style TargetType="{x:Type TextBox}">
-                <Setter Property="Background" Value="#0D0D0D"></Setter>
+                <Setter Property="Background" Value="#FF191919"></Setter>
                 <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="FontSize" Value="16"></Setter>
             </Style>
         
             

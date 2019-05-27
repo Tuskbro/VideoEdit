@@ -25,9 +25,7 @@ namespace Preview
                 StringBuilder st = new StringBuilder(40);
                 
                     WinAPI.SendMessage(ptr, WinAPI.WM_CLOSE, 0, st);
-                
-      
-            
+   
         }
 
 }

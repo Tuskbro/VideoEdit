@@ -9,7 +9,7 @@
         xmlns:local="clr-namespace:Preview"
          xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Closed="Window_Closed" Background="#0D0D0D">
+        Title="LightShotClip Editor"  Height="450" Width="800" Loaded="Window_Loaded" Closed="Window_Closed" Background="#0D0D0D" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     
     <Grid>
         
@@ -23,19 +23,17 @@
 
         <Menu Grid.Row="0" Height="24" VerticalAlignment="Top">
             <MenuItem Header="File"  >
-                <MenuItem Header="Open"/>
-                <MenuItem Header="New project"/>
-                <MenuItem Header="Save"/>
-                <MenuItem Header="Save As"/>
+                <MenuItem Header="Open" Name="Open" Click="Open_Click"/>
+                <MenuItem Header="New project" Name="NewProject"  Click="NewProject_Click"/>
+                <MenuItem Header="Save" Name="Save" Click="Save_Click"/>
+                
                 <MenuItem Header="Import" Name="Import" Click="Import_Click"/>
                 <MenuItem Header="Export" Name="Export" Click="Export_Click"/>
-                <MenuItem />
+                
                 <MenuItem Header="Exit"/>
             </MenuItem>
-            <MenuItem Header="Window">
-                
-            </MenuItem>
-            <MenuItem Header="Help">
+            
+            <MenuItem Header="Help"  Name="Help" Click="Help_Click">
                 
             </MenuItem>
             <MenuItem Name="OpenPlayer" Click="OpenPlayer_Click" Header="Open Player"></MenuItem>
@@ -55,7 +53,7 @@
             
             
             <DockPanel Grid.Column="0">
-                <DataGrid DockPanel.Dock="Top" Name="FileList" >
+                <DataGrid  MouseDoubleClick="FileList_MouseDoubleClick" DockPanel.Dock="Top" Name="FileList" IsReadOnly="True"   AutoGenerateColumns="False" MaxColumnWidth="150" FontFamily="Microsoft Sans Serif" FontSize="14" >
                     <DataGrid.Columns  >
                         <DataGridTextColumn x:Name="Name" Header="Name"/>
                         <DataGridTextColumn x:Name="Format" Header="Format"/>
@@ -70,7 +68,7 @@
             <DockPanel Grid.Column="4" >
                 <Grid DockPanel.Dock="Top">
                 <WindowsFormsHost  HorizontalAlignment="Stretch" Height="200" VerticalAlignment="Stretch"     >
-                    <wf:PictureBox x:Name="PictureBox"  Dock="Fill" SizeMode="AutoSize"  />
+                    <wf:PictureBox x:Name="PictureBox"  Dock="Fill" SizeMode="AutoSize"   />
                     
                 </WindowsFormsHost>
                     <Canvas Background="Transparent" Opacity="0"/>
@@ -95,8 +93,8 @@
 
         <local:ToolsBar Grid.Row="2" x:Name="Tools"/>
 
-        <WindowsFormsHost Name="wfh" Grid.Row="3">
-            <ax:AxTimelineControl x:Name="axTimeLine" />
+        <WindowsFormsHost Name="wfh" Grid.Row="3" >
+            <ax:AxTimelineControl x:Name="axTimeLine" OnClickClip="AxTimeLine_OnClickClip" />
         </WindowsFormsHost>
     
     </Grid>

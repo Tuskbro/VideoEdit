@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:Preview"
         mc:Ignorable="d"
-        Title="Player" Height="450" Width="800" Background="#0D0D0D">
+        Title="LightShotClip Player" Height="450" Width="800" Background="#0D0D0D" Closed="Window_Closed">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -21,12 +22,14 @@
             <Button Name="OpenFile" Click="OpenFile_Click"   Margin="3"  Width="60" Height="25" >
                 <TextBlock></TextBlock></Button>
 
-            <Button Name="BackPriviewBtn" Click="BackPriviewBtn_Click" MouseDown="BackPriviewBtn_MouseDown" Content="" Margin="3"  Width="60" Height="25" ></Button>
+            <Button Name="BackPriviewBtn" Click="BackPriviewBtn_Click"  Content="" Margin="3"  Width="60" Height="25" ></Button>
             <Button Name="StopPriViewBtn" Click="StopPriViewBtn_Click" Margin="3" Content="" Width="60" Height="25"></Button>
             <Button Name="PlayPriviewBtn" Click="PlayPriviewBtn_Click" Margin="3" Content="" Width="60" Height="25"></Button>
             <Button Name="PausePriviewBtn" Click="PausePriviewBtn_Click"  Margin="3" Content="" Width="60" Height="25"></Button>
-            <Button Name="NextPriviewBtn" Click="NextPriviewBtn_Click" MouseDown="BackPriviewBtn_MouseDown" Margin="3" Content="" Width="60" Height="25"></Button>
+            <Button Name="NextPriviewBtn" Click="NextPriviewBtn_Click"  Margin="3" Content="" Width="60" Height="25"></Button>
             <Button Name="MutePriviewBtn" Click="MutePriviewBtn_Click"  Margin="3" Content="" Width="60" Height="25"></Button>
+            <RadioButton  x:Name="SubON"  Width="60" FontSize="20" Foreground="#0FF2B2" Height="25" Margin="3"  />
         </WrapPanel >
+        
     </Grid>
 </Window>
